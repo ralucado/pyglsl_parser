@@ -4,8 +4,10 @@
 
 import platform
 
-from setuptools import setup
-from setuptools.extension import Extension
+#from setuptools import setup
+#from setuptools.extension import Extension
+from distutils.extension import Extension
+from distutils.core import setup
 from Cython.Build import cythonize
 
 
@@ -36,4 +38,4 @@ setup(name='pyglsl_parser',
       url='https://github.com/nicholasbishop/pyglsl_parser',
       author='Nicholas Bishop',
       author_email='nicholasbishop@gmail.com',
-      ext_modules=cythonize(extensions))
+      ext_modules=cythonize(extensions, language='c++'))
