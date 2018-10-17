@@ -1,5 +1,5 @@
 lint:
-	venv/bin/pylint \
+	/usr/local/bin/pylint \
 		--reports=no \
 		--output-format=parseable \
 		--disable=locally-disabled \
